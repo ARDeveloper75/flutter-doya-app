@@ -7,9 +7,11 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class HomePage extends StatelessWidget {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       drawer: Drawer(
         child: Container(
           color: HexColor('#2c3e50'),
@@ -41,10 +43,9 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.white,
           animationDuration: Duration(microseconds: 100),
           items: [
-            Icon(Icons.dashboard_customize_outlined,
-                size: 30, color: Colors.white),
-            Icon(Icons.menu_outlined, size: 30, color: Colors.white),
-            Icon(Icons.person, size: 30, color: Colors.white),
+            Icon(Icons.home, size: 30, color: Colors.white),
+            Icon(Icons.menu, size: 30, color: Colors.white),
+            Icon(Icons.dashboard, size: 30, color: Colors.white),
           ],
           onTap: (index) {
             //Handle button tap

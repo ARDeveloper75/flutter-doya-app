@@ -18,125 +18,78 @@ class NeedDoyaPage extends StatelessWidget {
       ),
       body: Container(
         child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 2,
-              crossAxisSpacing: 2,
-              childAspectRatio: 1,
-            ),
-            shrinkWrap: true,
-            primary: false,
-            itemCount: _catagory.dailyDua.length,
-            itemBuilder: (BuildContext context, int index) {
-              final item = _catagory.dailyDua[index];
-              return Padding(
-                padding: EdgeInsets.all(8.0),
-                child: GestureDetector(
-                  onTap: () => Get.to(
-                    AboutDuaPage(
-                      doya: item,
-                    ),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 1,
+            mainAxisSpacing: 2,
+            crossAxisSpacing: 2,
+            childAspectRatio: 3,
+          ),
+          shrinkWrap: true,
+          primary: false,
+          itemCount: _catagory.dailyDua.length,
+          itemBuilder: (BuildContext context, int index) {
+            final item = _catagory.dailyDua[index];
+            return Padding(
+              padding: EdgeInsets.all(8.0),
+              child: GestureDetector(
+                onTap: () => Get.to(
+                  AboutDuaPage(
+                    doya: item,
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Container(
-                      // height: 75,
-                      // width: Get.width,
-                      decoration: BoxDecoration(
-                        color: HexColor('#2c3e50'),
-                        borderRadius: BorderRadius.circular(30),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.blue.shade300,
-                            blurRadius: 10,
-                            spreadRadius: 5,
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Container(
+                    // height: 75,
+                    // width: Get.width,
+                    decoration: BoxDecoration(
+                      color: HexColor('#2c3e50'),
+                      borderRadius: BorderRadius.circular(30),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.blue.shade300,
+                          blurRadius: 10,
+                          spreadRadius: 5,
+                        ),
+                      ],
+                    ),
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          child: Padding(
+                            padding: EdgeInsets.only(top: 13),
+                            child: Image.asset(
+                              'assets/images/heading_1.png',
+                              fit: BoxFit.cover,
+                              color: Colors.white,
+                            ),
                           ),
-                        ],
-                      ),
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            child: Center(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: KText(
-                                  text: '${item['title']}',
-                                  fontSize: 20,
-                                  maxLines: 3,
-                                  color: Colors.white,
-                                ),
+                        ),
+                        Positioned(
+                          child: Center(
+                            child: Padding(
+                              padding:
+                                  EdgeInsets.only(top: 4, left: 60, right: 60),
+                              child: KText(
+                                text: '${item['title']}',
+                                textAlign: TextAlign.center,
+                                fontSize: 20,
+                                maxLines: 2,
+                                color: HexColor('#2c3e50'),
                               ),
                             ),
                           ),
-                          Positioned(
-                            bottom: 1,
-                            left: 50,
-                            child: KText(
-                              text: '${item['description']}',
-                              fontSize: 1,
-                              maxLines: 1,
-                              color: HexColor('#2c3e50'),
-                            ),
-                          ),
-                          Positioned(
-                            bottom: 1,
-                            left: 50,
-                            child: KText(
-                              text: '${item['dua']}',
-                              fontSize: 1,
-                              maxLines: 1,
-                              color: HexColor('#2c3e50'),
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-              );
-            }),
+              ),
+            );
+          },
+        ),
       ),
       backgroundColor: HexColor('#2c3e50'),
     );
   }
 }
-// ListView.builder(
-//           scrollDirection: Axis.vertical,
-//           shrinkWrap: true,
-//           primary: false,
-          
-//           itemCount: _catagory.dailyDua.length,
-//           itemBuilder: (BuildContext context, int index) {
-//             final item = _catagory.dailyDua[index];
-//             return Padding(
-//               padding: EdgeInsets.all(8.0),
-//               child: GestureDetector(
-//                 onTap: () => Get.to(
-//                   AboutDuaPage(
-//                     doya: item,
-//                   ),
-//                 ),
-//                 child: Container(
-//                   height: 75,
-//                   width: Get.width,
-//                   decoration: BoxDecoration(
-//                     boxShadow: [BoxShadow(color: Colors.blue)],
-//                     color: HexColor('#1abc9c').withOpacity(.50),
-//                     borderRadius: BorderRadius.circular(30),
-//                   ),
-//                   child: Center(
-//                     child: Padding(
-//                       padding: EdgeInsets.all(8.0),
-//                       child: KText(
-//                         text: '« ${item['title']} »',
-//                         fontSize: 20,
-//                         maxLines: 2,
-//                         color: Colors.white,
-//                       ),
-//                     ),
-//                   ),
-//                 ),
-//               ),
-//             );
-//           },
-//         ),

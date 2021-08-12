@@ -1,4 +1,6 @@
+
 import 'package:doya_app/src/pages/attention.dart';
+import 'package:doya_app/src/pages/needDoyaPage.dart';
 import 'package:doya_app/src/widgets/kText.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -58,6 +60,7 @@ class DoyaHomeCatagory extends StatelessWidget {
                               maxLines: 2,
                               fontSize: 25,
                               color: Colors.white,
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -91,15 +94,21 @@ class DoyaHomeCatagory extends StatelessWidget {
                           ),
                         ),
                         Center(
-                          child: Container(
-                            child: Padding(
-                              padding: EdgeInsets.all(6.0),
-                              child: KText(
-                                text: 'নামাজের দোয়া ও সূরা',
-                                fontFamily: 'Hind Siliguri Bold',
-                                fontSize: 22,
-                                color: Colors.white,
-                                maxLines: 2,
+                          child: InkWell(
+                            onTap: () {
+                              Get.to(NeedDoyaPage());
+                            },
+                            child: Container(
+                              child: Padding(
+                                padding: EdgeInsets.all(6.0),
+                                child: KText(
+                                  text: 'নামাজের দোয়া ও সূরা',
+                                  textAlign: TextAlign.center,
+                                  fontFamily: 'Hind Siliguri Bold',
+                                  fontSize: 22,
+                                  color: Colors.white,
+                                  maxLines: 2,
+                                ),
                               ),
                             ),
                           ),
@@ -129,7 +138,7 @@ class DoyaHomeCatagory extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.only(top: 20),
                           child: Image.asset(
-                            'assets/images/needDoya.png',
+                            'assets/images/namazTime.png',
                             height: 90,
                           ),
                         ),
@@ -141,6 +150,7 @@ class DoyaHomeCatagory extends StatelessWidget {
                             padding: EdgeInsets.all(8.0),
                             child: KText(
                               text: 'নামাজের সময় সূচি',
+                              textAlign: TextAlign.center,
                               fontFamily: 'Hind Siliguri Bold',
                               maxLines: 2,
                               fontSize: 25,
@@ -171,9 +181,9 @@ class DoyaHomeCatagory extends StatelessWidget {
                   child: Column(
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(top: 20),
+                        padding: EdgeInsets.only(top: 20, left: 10),
                         child: Image.asset(
-                          'assets/images/needDoya.png',
+                          'assets/images/namaz_2.png',
                           height: 90,
                         ),
                       ),
@@ -185,6 +195,7 @@ class DoyaHomeCatagory extends StatelessWidget {
                           padding: EdgeInsets.all(8.0),
                           child: KText(
                             text: 'বিশেষ নামাজ সমূহ',
+                            textAlign: TextAlign.center,
                             fontFamily: 'Hind Siliguri Bold',
                             maxLines: 2,
                             fontSize: 25,

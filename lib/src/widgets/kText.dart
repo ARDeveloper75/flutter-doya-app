@@ -7,6 +7,7 @@ class KText extends StatelessWidget {
 
   final String? fontFamily;
   final int? maxLines;
+  final TextAlign? textAlign;
 
   KText({
     required this.text,
@@ -14,6 +15,7 @@ class KText extends StatelessWidget {
     this.fontSize,
     this.fontFamily,
     this.maxLines,
+    this.textAlign,
   });
 
   @override
@@ -25,7 +27,7 @@ class KText extends StatelessWidget {
         fontFamily: fontFamily != null ? fontFamily : 'Hind Siliguri Regular',
         color: color != null ? color : Colors.white,
       ),
-      textAlign: TextAlign.center,
+      textAlign: textAlign,
       maxLines: maxLines,
       overflow: TextOverflow.ellipsis,
     );

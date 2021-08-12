@@ -62,7 +62,7 @@ class AttentionDua extends StatelessWidget {
             ),
             Image.asset(
               'assets/images/quran.png',
-              height: 150,
+              height: 130,
             ),
             SizedBox(
               height: 20,
@@ -85,7 +85,7 @@ class AttentionDua extends StatelessWidget {
                   child: Text(
                     'দোয়া কবুল হবার প্রধান শর্ত হলো এককভাবে আল্লাহর কাছে চাওয়া এবং তাঁর সাথে কাউকে শরিক না করা। যে ব্যক্তি প্রত্যহ সকাল ও সন্ধ্যায় আল্লাহ্‌কে বিভিন্ন দোয়ার মাধ্যমে স্মরণ করবে, কোন কিছুই তার ক্ষতি করতে পারবে না। কোরান ও হাদিসের আলোকে দৈনন্দিন দোয়ার গুরুত্ব ও তাৎপর্য অনেক, মানব জীবনের ইহকালীন ও পরলৌকিক যাবতীয় কল্যাণ এতে বিধৃত হয়েছে। দৈনন্দিন আমলের মধ্যে দোয়ার গুরুত্ব অপরিসীম। চলুন জেনে নেয়া যাক কোরান ও হাদিসের আলোকে কিছু দোয়ার বিষয়ে।',
                     style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 17,
                         color: Colors.white,
                         fontFamily: 'Hind Siliguri Regular'),
                     textAlign: TextAlign.justify,
@@ -99,6 +99,7 @@ class AttentionDua extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Container(
+                height: 50,
                 width: Get.width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -115,14 +116,14 @@ class AttentionDua extends StatelessWidget {
                   onPressed: () {
                     Get.to(NeedDoyaPage());
                   },
+                  label: KText(
+                    text: 'পরবর্তী পেজে যান',
+                    fontSize: 25,
+                  ),
                   icon: Icon(
                     EvaIcons.arrowForwardOutline,
                     size: 30,
                     color: Colors.white,
-                  ),
-                  label: KText(
-                    text: 'পরবর্তী পেজে যান',
-                    fontSize: 30,
                   ),
                 ),
               ),
@@ -133,6 +134,7 @@ class AttentionDua extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Container(
+                height: 50,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -150,12 +152,12 @@ class AttentionDua extends StatelessWidget {
                   },
                   icon: Icon(
                     EvaIcons.homeOutline,
-                    size: 25,
+                    size: 22,
                     color: Colors.white,
                   ),
                   label: KText(
                     text: 'হোম পেজে যান',
-                    fontSize: 25,
+                    fontSize: 22,
                   ),
                 ),
               ),
