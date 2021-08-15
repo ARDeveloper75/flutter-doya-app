@@ -107,53 +107,67 @@ class _AboutDuaPageState extends State<AboutDuaPage> {
                   top: 20,
                   left: 20,
                   right: 10,
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 400,
+                        height: 100,
+                        child: Text(
+                          (widget.doya['about']),
+                          style: TextStyle(
+                            fontSize: 17,
+                            color: HexColor('#2c3e50'),
+                            fontFamily: 'Hind Siliguri Bold',
+                          ),
+                          maxLines: 10,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                          top: 5,
+                          left: 20,
+                          right: 20,
+                        ),
+                        child: Divider(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Positioned(
+                  top: 140,
+                  left: 20,
+                  right: 10,
                   child: Container(
                     width: 400,
-                    child: Text(
-                      (widget.doya['about']),
-                      style: TextStyle(
-                        fontSize: 17,
+                    height: 100,
+                    color: Colors.red,
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 10),
+                      child: KText(
+                        text: (widget.doya['bangla']),
+                        fontSize: 18,
+                        maxLines: 5,
                         color: HexColor('#2c3e50'),
                         fontFamily: 'Hind Siliguri Bold',
                       ),
-                      maxLines: 10,
                     ),
-                  ),
-                ),
-                Positioned(
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                      top: 130,
-                      left: 20,
-                      right: 20,
-                    ),
-                    child: Divider(
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-                Positioned(
-                  top: 150,
-                  left: 20,
-                  right: 10,
-                  child: KText(
-                    text: (widget.doya['bangla']),
-                    fontSize: 18,
-                    maxLines: 5,
-                    color: HexColor('#2c3e50'),
-                    fontFamily: 'Hind Siliguri Bold',
                   ),
                 ),
                 Positioned(
                   top: 190,
                   left: 20,
                   right: 10,
-                  child: KText(
-                    text: (widget.doya['arabic']),
-                    fontSize: 20,
-                    maxLines: 5,
-                    color: HexColor('#2c3e50'),
-                    fontFamily: 'Hind Siliguri Bold',
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 10),
+                    child: KText(
+                      text: (widget.doya['arabic']),
+                      fontSize: 20,
+                      maxLines: 5,
+                      color: HexColor('#2c3e50'),
+                      fontFamily: 'Hind Siliguri Bold',
+                    ),
                   ),
                 ),
                 Positioned(
@@ -162,13 +176,16 @@ class _AboutDuaPageState extends State<AboutDuaPage> {
                   right: 10,
                   child: Container(
                     width: 400,
-                    child: Text(
-                      (widget.doya['meaning']),
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: HexColor('#2c3e50'),
-                          fontFamily: 'Hind Siliguri Regular'),
-                      textAlign: TextAlign.justify,
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 20),
+                      child: Text(
+                        (widget.doya['meaning']),
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: HexColor('#2c3e50'),
+                            fontFamily: 'Hind Siliguri Regular'),
+                        textAlign: TextAlign.justify,
+                      ),
                     ),
                   ),
                 ),
@@ -179,8 +196,11 @@ class _AboutDuaPageState extends State<AboutDuaPage> {
                       left: 20,
                       right: 20,
                     ),
-                    child: Divider(
-                      color: Colors.black,
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 10),
+                      child: Divider(
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                 ),
@@ -191,7 +211,7 @@ class _AboutDuaPageState extends State<AboutDuaPage> {
                   child: Container(
                     width: 400,
                     child: Text(
-                      (widget.doya['question']),
+                      (widget.doya['subtitle']),
                       style: TextStyle(
                           fontSize: 25,
                           color: HexColor('#2c3e50'),
@@ -204,11 +224,12 @@ class _AboutDuaPageState extends State<AboutDuaPage> {
                   child: Padding(
                     padding: EdgeInsets.only(
                       top: 375,
-                      left: 50,
-                      right: 50,
+                      right: 290,
+                      left: 20,
                     ),
                     child: Divider(
                       color: Colors.black,
+                      thickness: 2,
                     ),
                   ),
                 ),
